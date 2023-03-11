@@ -1731,7 +1731,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="la_error">
     <property name="geometry">
      <rect>
       <x>170</x>
