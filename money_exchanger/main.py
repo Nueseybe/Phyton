@@ -21,18 +21,18 @@ class MoneyExchanger(QtWidgets.QMainWindow):
         
         self.la_error.clear()
         self.money_code = self.c_first.currentText()
-        print(self.money_code)
+        #print(self.money_code)
         self.rate =self.c_second.currentText()
-        print(self.rate)
+        #print(self.rate)
         #date = select_date.split("/")
         date1 = self.ca_date.date().toString("yyyy-MM-dd")
         self.date = date1.split("-")
-        print(self.date)
+        #print(self.date)
         url = f"https://v6.exchangerate-api.com/v6/b7af4957b142f323a4b710df/history/{self.money_code}/{self.date[0]}/{self.date[1]}/{self.date[2]}"
         try: 
             response = requests.get (url)
             result = response.json()["conversion_rates"][self.rate]
-            print(result)
+            #print(result)
             self.la_first.setText("1 {}".format (self.money_code))
             self.la_second.setText("{} on {}/{}/{}   ".format(result,self.date[2],self.date[1],self.date[0]))
             #self.la_error.setText(f"On {self.date[2]}/{self.date[1]}/{self.date[0]}   ")
