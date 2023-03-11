@@ -20,6 +20,8 @@ class MoneyExchanger(QtWidgets.QMainWindow):
     def ExchangeScreen(self):
         
         self.la_error.clear()
+        self.la_first.clear()
+        self.la_second.clear()
         self.money_code = self.c_first.currentText()
         #print(self.money_code)
         self.rate =self.c_second.currentText()
