@@ -19,7 +19,7 @@ class MoneyExchanger(QtWidgets.QMainWindow):
         self.ca_date.setDateTime(self.currentday)
     def ExchangeScreen(self):
         
-        
+        self.la_error.clear()
         self.money_code = self.c_first.currentText()
         print(self.money_code)
         self.rate =self.c_second.currentText()
